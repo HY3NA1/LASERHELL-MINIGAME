@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
-
+using UnityEngine.UI;
+using TMPro; 
 public class DEATH : MonoBehaviour
 {
-
+    public TextMeshProUGUI display;
     public int count = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,7 +15,7 @@ public class DEATH : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        display.text = ("Time Survived: " + count.ToString());
     }
 
     void highscore()

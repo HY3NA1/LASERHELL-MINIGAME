@@ -30,5 +30,13 @@ public class PlayerMove : MonoBehaviour
         {
             transform.position = (new Vector3(6.75f, transform.position.y, transform.position.z));
         }
+        if (transform.position.z < -6.75f)
+        {
+            transform.position = (new Vector3(transform.position.x, transform.position.y, -6.75f));
+        }
+        if (transform.position.z > 7.5f)
+        {
+            transform.position = (new Vector3(transform.position.x, transform.position.y, 7.5f));
+        }
     }
 }
